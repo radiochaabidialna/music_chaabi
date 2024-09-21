@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio Chaabi Dialna</title>
+  <link rel="stylesheet" href="css/styles.css">
+<style>
+   section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+#dernieres-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.song-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #dernieres-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  #dernieres-list {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Radio Chaabi Dialna</h1>
+    <p>La Musique Populaire Algérienne</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="artists.html">Artistes</a></li>
+      <li><a href="songs.html">Chansons</a></li>
+      <li><a href="poetry.html">Poésie</a></li>
+      <li><a href="bouqallates.html">Bouqallates</a></li>
+      <li><a href="top10.html">Top 10</a></li>
+      <li><a href="about.html">À propos</a></li>
+    </ul>
+  </nav>
+   <!-- Bannière des dédicaces -->
+<div id="dedication-banner" class="dedication-banner">
+    <div id="dedication-text" class="dedication-texts"></div>
+</div>
+<section id="dernieres" class="section active">
+  <h2>Dernières chansons</h2>
+  <div id="dernieres-list"></div>
+<!--</div>-->
+
+<br><br><br><br><br><br>
+<div id="player">
+    <audio id="audio-player" controls>
+        <source src="" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+</div>
+    </section>
+   <div id="dedication-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Envoyer une dédicace</h2>
+      <form id="dedication-form">
+        <input type="text" id="dedication-name" placeholder="Votre nom" required>
+        <textarea id="dedication-message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <button id="dedication-button">Envoyer une dédicace</button>
+  <script src="js/dedications.js"></script>
+  <script src="js/dernieres.js"></script>
+</body>
+</html>

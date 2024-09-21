@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artistes</title>
+  <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/cards.css">
+   <link rel="stylesheet" href="css/profile.css">
+   <style>
+  .songs-list {
+  margin-top: 10px;
+}
+
+.song-item {
+  margin: 5px 0;
+
+padding: 10px 25px;
+    background: #f64f59;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: backgroun
+	}
+   </style>
+</head>
+<body>
+  <header>
+    <h1>Artistes du Chaabi</h1>
+  </header>
+
+  <nav>
+    <ul>
+    <li><a href="index.html">Accueil</a></li>
+      <li><a href="artists.html">Artistes</a></li>
+      <li><a href="songs.html">Chansons</a></li>
+      <li><a href="poetry.html">Poésie</a></li>
+      <li><a href="bouqallates.html">Bouqallates</a></li>
+      <li><a href="top10.html">Top 10</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">À propos</a></li>
+    </ul>
+  </nav>
+  <!-- Bannière des dédicaces -->
+<div id="dedication-banner" class="dedication-banner">
+    <div id="dedication-text" class="dedication-texts"></div>
+</div>
+<div id="like-message"></div>
+  <div id="artists-section">
+    <h2>Nos Artistes</h2>
+    <div id="artists-list"></div>
+    <div class="pagination" id="artists-pagination"></div>
+  </div>
+  <br><br><br>
+    <div class="profile-container" id="profile-container">
+	</div>
+  <div id="results"></div>
+<!-- <div class="pagination" id="results-pagination"></div> -->
+  <br><br><br><br><br><br>
+  <div id="player">
+    <audio id="audio-player" controls>
+        <source src="" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+</div>
+
+  <!-- Charger les fichiers JavaScript -->
+  <script src="js/artistes-ia.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artistes</title>
+  <link rel="stylesheet" href="css/styles.css">
+<style>
+    /* Container qui contient les cartes */
+#results {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cartes par ligne sur les grands écrans */
+  gap: 20px; /* Espacement entre les cartes */
+  margin: 20px 0;
+}
+
+/* Style des cartes */
+.item-card {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Responsivité pour les écrans moyens (2 cartes par ligne) */
+@media (max-width: 1024px) {
+  #results {
+    grid-template-columns: repeat(2, 1fr); /* 2 cartes par ligne */
+  }
+}
+
+/* Responsivité pour les petits écrans (1 carte par ligne) */
+@media (max-width: 768px) {
+  #results {
+    grid-template-columns: 1fr; /* 1 carte par ligne */
+  }
+}
+//pagination
+ // CSS pour styliser la pagination
+const style = document.createElement('style');
+style.innerHTML = `
+  #categories-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  #categories-pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  #categories-pagination button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  .pagination button{
+  color: #060606;
+  }
+  #categories-pagination button:disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+`;
+document.head.appendChild(style);   
+</style>
+ <link rel="stylesheet" href="css/cards.css">
+</head>
+<body>
+  <header>
+    <h1>Categories du Chaabi</h1>
+  </header>
+
+  <nav>
+    <ul>
+    <li><a href="index.html">Accueil</a></li>
+      <li><a href="artists.html">Artistes</a></li>
+      <li><a href="songs.html">Chansons</a></li>
+      <li><a href="poetry.html">Poésie</a></li>
+      <li><a href="bouqallates.html">Bouqallates</a></li>
+      <li><a href="top10.html">Top 10</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">À propos</a></li>
+    </ul>
+  </nav>
+   <div class="category-selector">
+      <select id="category-select" onchange="loadCategory()">
+        <option value="">Toutes les catégories</option>
+        <option value="chaabi">Chaabi</option>
+        <option value="emissions">Émissions</option>
+        <option value="fetes">Fêtes</option>
+        <option value="andalou">Andalou</option>
+        <option value="interviews">Interviews</option>
+      </select>
+    </div>
+  <!-- Bannière des dédicaces -->
+<div id="dedication-banner" class="dedication-banner">
+    <div id="dedication-text" class="dedication-texts"></div>
+</div>
+<div id="like-message"></div>
+  <!-- Conteneur pour les résultats de la recherche -->
+ <div id="categories-section">
+    <h2>Categorie</h2>
+<div id="results"></div>
+ </div>
+<!-- Pagination -->
+<!--<div class="pagination" id="results-pagination"></div>-->
+   <div class="pagination" id="categories-pagination"></div>
+  
+  
+
+  <br><br><br><br><br><br>
+  <div id="player">
+    <audio id="audio-player" controls>
+        <source src="" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+</div>
+
+  <!-- Charger les fichiers JavaScript -->
+  <script src="js/categories-ia-2.js"></script>
+</body>
+</html>

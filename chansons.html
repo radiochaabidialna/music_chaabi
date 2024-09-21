@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chansons Populaires</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+  #like-message {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chansons Populaires</h1>
+  </header>
+
+  <nav>
+    <ul>
+    <li><a href="index.html">Accueil</a></li>
+      <li><a href="artists.html">Artistes</a></li>
+      <li><a href="songs.html">Chansons</a></li>
+      <li><a href="poetry.html">Poésie</a></li>
+      <li><a href="bouqallates.html">Bouqallates</a></li>
+      <li><a href="top10.html">Top 10</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">À propos</a></li>
+    </ul>
+  </nav>
+  <!-- Bannière des dédicaces -->
+<div id="dedication-banner" class="dedication-banner">
+    <div id="dedication-text" class="dedication-texts"></div>
+</div>
+<div id="like-message"></div>
+
+  <div id="songs-section" class="section">
+    <h2>Chansons populaires</h2>
+    <div id="songs-list"></div>
+    <div class="pagination" id="songs-pagination"></div>
+  </div>
+<br><br><br><br><br>
+  <div id="player">
+    <audio id="audio-player" controls>
+        <source src="" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+</div>
+    <script src="js/chansons.js"></script>
+</body>
+</html>

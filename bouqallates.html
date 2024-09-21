@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!--<html dir="rtl" lang="ar">-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouqallates</title>
+  <link rel="stylesheet" href="css/styles.css">
+   <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <!--<style>
+    @font-face {
+        font-family: 'MyArabicFont';
+        src: url('http://localhost/fonts/A Suls Regular.ttf');
+    }
+</style>-->
+  
+  <link href="https://fonts.googleapis.com/css?family=Droid+Arabic+Naskh" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Bouqallates</h1>
+  </header>
+
+  <nav>
+    <ul>
+    <li><a href="index.html">Accueil</a></li>
+      <li><a href="artists.html">Artistes</a></li>
+      <li><a href="songs.html">Chansons</a></li>
+      <li><a href="poetry.html">Poésie</a></li>
+      <li><a href="bouqallates.html">Bouqallates</a></li>
+      <li><a href="top10.html">Top 10</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">À propos</a></li>
+    </ul>
+  </nav>
+  <!-- Bannière des dédicaces -->
+<div id="dedication-banner" class="dedication-banner">
+    <div id="dedication-text" class="dedication-texts"></div>
+</div>
+ <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-md">
+   <div class="flex items-center mb-4">
+    <i class="fas fa-heart text-red-500 mr-2">
+    </i>
+    <h1 class="text-xl font-bold text-red-500">
+     Chaabi
+    </h1>
+   </div>
+   <div class="flex justify-between items-start mb-4">
+    <div class="mr-4">
+     <h2 class="text-2xl font-bold mb-4">
+      Bouqallattes du Chaabi
+     </h2>
+     <p class="text-xl mb-4 text-right arabic-text" style="font-size: xx-large;">
+      قال بلفضل بلفتح لفضل أجري سعدى مهما كان ماشرق ولا مغرب ولا شمال ولا ميلاد سيدي بلال أنويو وأعقدو أ قولو باسم الله
+     </p>
+    </div>
+    <img alt="Illustration of a traditional scene" class="w-24 h-24 rounded-lg" height="100" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-BVbpSZmLndA7MfHIxv2ahIKS/user-IBY8IaMXtVn7IVIdZeyvjx16/img-KWy9l1gvsA3sc1AG6UJLxDcN.png?st=2024-09-18T09%3A59%3A11Z&amp;se=2024-09-18T11%3A59%3A11Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-18T01%3A07%3A24Z&amp;ske=2024-09-19T01%3A07%3A24Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=Ul/SWKeT90hVc98L5015M%2BwqowUVGCFnH76Ph6uSmIM%3D" width="100"/>
+   </div>
+   <div class="flex justify-between items-center mb-4">
+    <button onclick="loadRandomBouqallate()" class="bg-blue-500 text-white px-4 py-2 rounded-lg">
+     LANCER UNE BOUQALLA AU HAZARD
+    </button>
+   </div>
+   <div id="bouqallate-content">
+   <div class="mb-4">
+    <h3 class="font-bold mb-2">
+     Arabe:
+    </h3>
+    <div class="bg-green-500 text-white p-4 rounded-lg text-right">
+     بنتي سومتها غالية وميديها غير راجل ولد حلالي
+    </div>
+   </div>
+   <div class="mb-4">
+    <h3 class="font-bold mb-2">
+     Français:
+    </h3>
+    <div class="bg-blue-500 text-white p-4 rounded-lg">
+     LA VALEUR DE MA FILLE EST GRANDE ET CELUI QUI L'ÉPOUSE SERA UN FILS DE FAMILLE
+    </div>
+   </div>
+   <div class="mb-4">
+    <h3 class="font-bold mb-2">
+     Phonetic:
+    </h3>
+    <div class="bg-green-200 text-green-800 p-4 rounded-lg">
+     BANTI SOUMETHA GHALYA OU MAYADDIHA GHIR RADJEL WALD AHLELI
+    </div>
+   </div>
+   </div>
+   
+   <p class="text-gray-600">
+    by
+    <span class="font-bold">
+     Mahfoud
+    </span>
+    , 05/01/2020
+   </p>
+  </div>
+  
+ <!-- 
+  <script>
+ fetch('list-images.php')
+  .then(response => response.json())
+  .then(imageFiles => {
+    const randomIndex = Math.floor(Math.random() * imageFiles.length);
+    const randomFile = imageFiles[randomIndex];
+    const img = document.querySelector('img');
+    img.src = 'http://localhost/img_comparer/' + randomFile;
+    img.alt = 'Illustration of a traditional scene';
+    img.className = 'w-24 h-24 rounded-lg';
+    img.height = 100;
+    img.width = 100;
+  })
+  .catch(error => console.error('Erreur lors de la requête :', error));
+  </script>-->
+  
+  
+  
+  
+
+
+  <script src="js/bouqallates.js"></script>
+</body>
+</html>
